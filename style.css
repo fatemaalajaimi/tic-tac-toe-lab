@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Concert+One&display=swap');
+
+body {
+  background-color: gainsboro;
+  /* Use a system font, if none are available use an available sans-sarif */
+  font-family: system-ui, sans-serif;
+  margin: 0;
+
+  background: #654ea3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaafc8,
+    #654ea3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaafc8,
+    #654ea3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 45px;
+}
+
+.main {
+  display: flex;
+}
+
+.x-section {
+  flex: 1;
+  color: #654ea3;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 200px;
+}
+
+.title {
+  flex: 1;
+}
+
+.o-section {
+  flex: 1;
+  color: #eaafc8;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 200px;
+}
+
+.sqr {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border: 3px solid black;
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  font-family: 'Concert One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 120px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.reset-button-box {
+  text-align: center;
+}
+
+.reset-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  background-color: white;
+  border-radius: 20px;
+  color: #654ea3;
+  font-family: 'Anton', sans-serif;
+}
+
+.reset-button:hover {
+  background-color: #654ea3;
+  color: white;
+}
