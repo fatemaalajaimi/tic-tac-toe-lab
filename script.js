@@ -16,13 +16,16 @@ let board = ['', '', '', '', '', '', '', '', '']
 let turn = 'x'
 let winner = false
 let tie = false
-
+let xWins = 0
+let oWins = 0
 let msg
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
 const resetBtnEl = document.querySelector('#reset')
+const xwinsHTML = document.querySelector('.x-wins')
+const owinsHTML = document.querySelector('.o-wins')
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -44,6 +47,13 @@ const updateMessage = () => {
     messageEl.textContent = 'It is a tie'
   } else {
     messageEl.textContent = `Congrats, Player ${turn} won`
+    if (turn === 'x') {
+      xWins++
+    } else {
+      oWins++
+    }
+    xwinsHTML.innerText = xWins
+    owinsHTML.innerText = oWins
   }
 }
 
@@ -112,6 +122,8 @@ const init = () => {
   turn = 'x'
   winner = false
   tie = false
+  xwinsHTML.innerText = xWins
+  owinsHTML.innerText = oWins
   render()
 }
 
